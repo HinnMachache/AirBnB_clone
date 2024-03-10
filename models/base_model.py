@@ -31,7 +31,7 @@ class BaseModel:
         for key, value in self.__dict__.items():
             dic[key] = value
         class_name = self.__class__.__name__
-        return "[" + class_name + "]" + " " + "(" + self.id + ")" + " " + str(dic)
+        return "[" + class_name + "] " + "(" + self.id + ") " + str(dic)
 
     def save(self):
         """Save Information to storage"""
