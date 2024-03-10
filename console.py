@@ -31,8 +31,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_create(self, model):
         """Creates a new instance"""
-        models = {"BaseModel": BaseModel, "Amenity": Amenity, "City": City
-                  "Place": Place, "Review": Review, "State": State
+        models = {"BaseModel": BaseModel, "Amenity": Amenity, "City": City,
+                  "Place": Place, "Review": Review, "State": State,
                   "User": User}
         if not model:
             print("** class name missing **")
@@ -47,8 +47,8 @@ class HBNBCommand(cmd.Cmd):
         """Prints string representation of an instance"""
         model = model.split(" ")
         data = storage.all()
-        models = {"BaseModel": BaseModel, "Amenity": Amenity, "City": City
-                  "Place": Place, "Review": Review, "State": State
+        models = {"BaseModel": BaseModel, "Amenity": Amenity, "City": City,
+                  "Place": Place, "Review": Review, "State": State,
                   "User": User}
 
         if not model[0]:
@@ -68,8 +68,8 @@ class HBNBCommand(cmd.Cmd):
         """Delete an intance based on the id"""
         model = model.split(" ")
         data = storage.all()
-        models = {"BaseModel": BaseModel, "Amenity": Amenity, "City": City
-                  "Place": Place, "Review": Review, "State": State
+        models = {"BaseModel": BaseModel, "Amenity": Amenity, "City": City,
+                  "Place": Place, "Review": Review, "State": State,
                   "User": User}
 
         if not model[0]:
@@ -138,4 +138,4 @@ class HBNBCommand(cmd.Cmd):
 
 
 if __name__ == "__main__":
-    HBNBommand().cmdloop()
+    HBNBCommand().cmdloop()
