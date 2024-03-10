@@ -31,8 +31,16 @@ class FileStorage:
     def reload(self):
         """Deserializes __objects into JSON files"""
         from models.base_model import BaseModel
+        from models.user import User
+        from models.city import City
+        from models.state import State
+        from models.amenity import Amenity
+        from models.place import Place
+        from models.review import Review
 
-        models = {"BaseModel": BaseModel}
+        models = {"BaseModel": BaseModel, "Amenity": Amenity, "City": City,
+                  "Place": Place, "Review": Review, "State": State,
+                  "User": User}
 
         if os.path.exists(FileStorage.__file_path):
             with open(FileStorage.__file_path, 'r') as file:
